@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #050505;
+  color: #00f3ff;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+canvas {
+  touch-action: none;
+}
+
+/* Jarvis Glassmorphism Component */
+.jarvis-glass {
+  background: rgba(0, 243, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.jarvis-corner-border {
+  position: relative;
+}
+
+.jarvis-corner-border::before,
+.jarvis-corner-border::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: #00f3ff;
+  border-style: solid;
+}
+
+.jarvis-corner-border::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.jarvis-corner-border::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Scanner Animation */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanner-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #00f3ff, transparent);
+  animation: scan 3s linear infinite;
+  opacity: 0.5;
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+  }
+
+  25% {
+    text-shadow: -2px 0 #ff00c1, 2px 0 #00fff9;
+  }
+
+  50% {
+    text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+  }
+
+  75% {
+    text-shadow: -2px 0 #ff00c1, 2px 0 #00fff9;
+  }
+
+  100% {
+    text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+  }
+}
+
+.text-glitch:hover {
+  animation: glitch 0.3s infinite;
+}
