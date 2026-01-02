@@ -1,4 +1,4 @@
-# PROJEKT // STARK_INTEL_HUB
+# PROJEKT // VENKATESH_INTEL_HUB
 
 An immersive, React-based portfolio leveraging 3D physical environments and holographic HUD interfaces.
 
@@ -21,4 +21,4 @@ Ensure your GitHub username matches the `homepage` field in `package.json`, then
 npm run deploy
 ```
 
-Access the hub at: `https://yourusername.github.io/tony-stark-portfolio`
+Access the hub at: `https://venkatesh-107.github.io/venkatesh-portfolio`
